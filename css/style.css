@@ -9686,7 +9686,7 @@ textarea.form-control {
 
 /* Fix for non-clickable Hire Me button */
 /* Ensure Hire Me button is clickable */
-.ftco-hireme {
+/* .ftco-hireme {
   position: relative;
   z-index: 1;
 }
@@ -9694,4 +9694,17 @@ textarea.form-control {
 .ftco-hireme .btn {
   position: relative;
   z-index: 999;
+} */
+
+
+.slider-item {
+  background-image: url('images/your-background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
 }
+
+
+
