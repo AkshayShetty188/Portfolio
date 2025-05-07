@@ -808,6 +808,11 @@
 	  }, 5000);
 	});
   </script>
+  <script>
+	document.querySelectorAll('.home-slider .slider-item').forEach(item => {
+	  item.style.touchAction = 'pan-y';
+	});
+  </script>
   
   </body>
 </html>
