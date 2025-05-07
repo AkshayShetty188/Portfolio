@@ -48,47 +48,58 @@
 	      </div>
 	    </div>
 	  </nav>
+
+	  
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-			<div class="slider-item" style="background-image:url('files/slider-bg-1.png');">
-				<div class="overlay"></div>
-				<div class="container">
-				  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-					<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-					  <div class="text">
-						<span class="subheading">Hello!</span>
-						<h1 class="mb-4 mt-3">I'm <span>Akshay D Shetty</span></h1>
-						<h2 class="mb-4">A Data Scientist</h2>
-						<p>
-						  <a href="https://www.linkedin.com/in/akshay18shetty" target="_blank" class="btn btn-primary py-3 px-4">Hire me</a>
-						  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-						</p>
-					  </div>
-					</div>
+		<div class="home-slider owl-carousel">
+	  
+		  <!-- 🖼️ First Slider: Image Background -->
+		  <div class="slider-item" style="background-image: url('files/slider-bg-4.png');">
+			<div class="overlay"></div>
+			<div class="container">
+			  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+				  <div class="text">
+					<span class="subheading">Hello!</span>
+					<h1 class="mb-4 mt-3">I'm <span>Akshay D Shetty</span></h1>
+					<h2 class="mb-4">A Data Scientist</h2>
+					<p>
+					  <a href="https://www.linkedin.com/in/akshay18shetty" target="_blank" class="btn btn-primary py-3 px-4">Hire me</a>
+					  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+					</p>
 				  </div>
 				</div>
 			  </div>
-			  
-
-			  <div class="slider-item" style="background-image:url('files/slider-bg-4.png');">
-				<div class="overlay"></div>
-				<div class="container">
-				  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-					<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-					  <div class="text">
-						<span class="subheading">Hello!</span>
-						<h1 class="mb-4 mt-3">I'm a <span>Data Scientist</span> based in India</h1>
-						<p>
-						  <a href="https://www.linkedin.com/in/akshay18shetty" target="_blank" class="btn btn-primary py-3 px-4">Hire me</a>
-						  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
-						</p>
-					  </div>
-					</div>
+			</div>
+		  </div>
+	  
+		  <!-- 🎥 Second Slider: Video Background -->
+		  <div class="slider-item video-slide">
+			<video autoplay muted loop playsinline class="bg-video">
+			  <source src="files/video3.mp4" type="video/mp4">
+			  Your browser does not support the video tag.
+			</video>
+			<div class="overlay"></div>
+			<div class="container">
+			  <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+				  <div class="text">
+					<span class="subheading">Hello!</span>
+					<h1 class="mb-4 mt-3">I'm a <span>Data Scientist</span> based in India</h1>
+					<p>
+					  <a href="https://www.linkedin.com/in/akshay18shetty" target="_blank" class="btn btn-primary py-3 px-4">Hire me</a>
+					  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+					</p>
 				  </div>
 				</div>
-			  </div>			  
-	    </div>
-    </section>
+			  </div>
+			</div>
+		  </div>
+	  
+		</div>
+	  </section>
+	  
+	  
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
@@ -777,6 +788,26 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
-    
+  <script>
+	$(document).ready(function () {
+	  // Initialize Owl Carousel with autoplay turned off
+	  var owl = $(".home-slider");
+	  owl.owlCarousel({
+		items: 1,
+		loop: true,
+		autoplay: false, // we will start it manually after 5s
+		autoplayTimeout: 7000,
+		animateOut: 'fadeOut',
+		autoplayHoverPause: false
+	  });
+  
+	  // Wait 5 seconds, then go to next slide and start autoplay
+	  setTimeout(function () {
+		owl.trigger('next.owl.carousel');
+		owl.trigger('play.owl.autoplay');
+	  }, 5000);
+	});
+  </script>
+  
   </body>
 </html>
