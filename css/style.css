@@ -9703,10 +9703,14 @@ textarea.form-control {
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
+  min-height: 100dvh;  /* ✅ Fixes scrolling issue on mobile */
   position: relative;
+  overflow: hidden;
+  touch-action: pan-y;  /* ✅ Enables vertical scroll gesture */
 }
 
-.slider-item {
+
+/* .slider-item {
   height: 100vh;
   position: relative;
   background-size: cover;
@@ -9739,6 +9743,35 @@ textarea.form-control {
   position: relative;
   z-index: 2;
   color: #fff;
+} */
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none; /* ✅ THIS IS CRITICAL */
+}
+
+.slider-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1;
+  pointer-events: none; /* ✅ This also must not block clicks */
+}
+
+.slider-item .text,
+.slider-item .btn {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 
