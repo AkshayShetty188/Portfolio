@@ -9697,17 +9697,17 @@ textarea.form-control {
 } */
 
 
-.slider-item {
+/* .slider-item {
   background-image: url('images/your-background.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
-  min-height: 100dvh;  /* ✅ Fixes scrolling issue on mobile */
+  min-height: 100dvh;  /* ✅ Fixes scrolling issue on mobile 
   position: relative;
   overflow: hidden;
-  touch-action: pan-y;  /* ✅ Enables vertical scroll gesture */
-}
+  touch-action: pan-y;  /* ✅ Enables vertical scroll gesture 
+}  */
 
 
 /* .slider-item {
