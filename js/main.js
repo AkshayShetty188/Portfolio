@@ -269,7 +269,19 @@
     fixedContentPos: false
   });
 
+  document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const navbarToggler = document.querySelector('.navbar-toggler');
 
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    });
+  });
+});
 
 
 
