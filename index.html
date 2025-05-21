@@ -808,5 +808,13 @@
 	  }, 5000);
 	});
   </script>
+  <script>
+  document.addEventListener('touchstart', function (e) {
+    if (!e.target.closest('.owl-carousel')) {
+      document.body.style.overflow = 'auto';
+    }
+  }, { passive: true });
+</script>
+
   </body>
 </html>
