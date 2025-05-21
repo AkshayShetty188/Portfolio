@@ -9808,3 +9808,18 @@ html, body {
 body {
   touch-action: pan-y;
 }
+
+
+/* ✅ Fix overflow scroll issue on mobile after menu open/close */
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar-collapse {
+  transition: height 0.3s ease;
+}
+
+.navbar-collapse.collapse.show {
+  display: block !important;
+}
