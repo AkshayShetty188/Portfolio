@@ -283,6 +283,13 @@
   });
 });
 
+// ✅ Force scroll to work on all slider items on touch
+document.addEventListener('touchmove', function (e) {
+  if (e.target.closest('.slider-item')) {
+    e.stopPropagation(); // allow scroll
+  }
+}, { passive: true });
+
 
 
 })(jQuery);
