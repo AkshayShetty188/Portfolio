@@ -9780,9 +9780,9 @@ textarea.form-control {
 /* === 🔧 Fix: Mobile scroll issue on home section === */
 
 html, body {
-  height: auto !important;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  height: auto !important;
 }
 
 #home-section {
@@ -9793,16 +9793,9 @@ html, body {
   z-index: 1;
 }
 
-.home-slider.owl-carousel {
-  height: 100vh !important;
-  overflow: hidden;
-}
-
+.home-slider.owl-carousel,
 .slider-item {
   height: 100vh !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -9812,7 +9805,6 @@ html, body {
   align-items: center;
 }
 
-/* Allow vertical pan on touch devices */
 body {
   touch-action: pan-y;
 }
