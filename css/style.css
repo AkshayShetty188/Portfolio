@@ -9777,30 +9777,42 @@ textarea.form-control {
 
 
 
-/* 🔧 Fix for mobile scroll issue from home section */
+/* === 🔧 Fix: Mobile scroll issue on home section === */
 
-body, html {
-  overflow-x: hidden;
-  overflow-y: auto;
+html, body {
   height: auto !important;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
 #home-section {
+  height: 100vh;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
   position: relative;
-  height: auto !important;
-  min-height: 100vh;
-  overflow: visible;
+  z-index: 1;
 }
 
 .home-slider.owl-carousel {
-  height: auto !important;
-  overflow: visible !important;
+  height: 100vh !important;
+  overflow: hidden;
 }
 
 .slider-item {
-  height: 100vh;
-  min-height: 500px; /* fallback for small screens */
+  height: 100vh !important;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slider-item .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Allow vertical pan on touch devices */
+body {
+  touch-action: pan-y;
 }
