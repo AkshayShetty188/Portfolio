@@ -1,0 +1,24 @@
+<!-- 📄 File: plant-deficiency.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Nutrient Deficiency Detection</title>
+  <link rel="stylesheet" href="css/plant-deficiency.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🌿 Plant Nutrient Deficiency Classifier</h1>
+    <p>Select a crop leaf image below to check its nutrient status.</p>
+
+    <input type="file" id="imageUpload" accept="image/*" />
+    <button onclick="predictImage()">🔍 Predict</button>
+
+    <div id="result"></div>
+    <img id="preview" src="" alt="Preview" style="display: none;" />
+  </div>
+
+  <script src="js/plant-deficiency.js"></script>
+</body>
+</html>

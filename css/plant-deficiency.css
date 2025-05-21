@@ -1,0 +1,92 @@
+/* General styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e8f5e9, #e0f7fa);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #00796b;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Upload section */
+.upload-section {
+  max-width: 600px;
+  background: white;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section h2 {
+  text-align: center;
+  color: #004d40;
+  margin-bottom: 1.5rem;
+}
+
+input[type="file"] {
+  display: block;
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+}
+
+/* Image preview */
+#preview {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 2px solid #80cbc4;
+}
+
+/* Submit button */
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00796b;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Prediction result */
+.result {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+/* Loader spinner */
+.loader {
+  display: none;
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #00796b;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

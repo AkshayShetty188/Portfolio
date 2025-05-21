@@ -9777,3 +9777,30 @@ textarea.form-control {
 
 
 
+/* 🔧 Fix for mobile scroll issue from home section */
+
+body, html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+#home-section {
+  position: relative;
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+.home-slider.owl-carousel {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.slider-item {
+  height: 100vh;
+  min-height: 500px; /* fallback for small screens */
+  display: flex;
+  align-items: center;
+}
