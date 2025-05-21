@@ -9776,16 +9776,17 @@ textarea.form-control {
 
 
 
+/* ✅ Fix for scroll on home section in mobile view */
 
-/* ✅ Fix mobile scroll issue after menu interaction */
 html, body {
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
   height: auto !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 #home-section {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto !important;
   overflow-y: auto !important;
   position: relative;
   z-index: 1;
@@ -9793,24 +9794,44 @@ html, body {
 
 .home-slider.owl-carousel,
 .slider-item {
-  height: 100vh !important;
-  overflow: hidden;
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-item .container {
-  height: 100%;
+  height: auto !important;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.navbar-collapse {
-  transition: height 0.3s ease;
-}
-
-.navbar-collapse.collapse.show {
-  display: block !important;
-}
-
 body {
   touch-action: pan-y;
+}
+
+
+/* ✅ Fix: Allow scroll over background images and video in home slider */
+
+.slider-item,
+.slider-item .overlay,
+.slider-item .container,
+.bg-video {
+  touch-action: pan-y !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure video doesn't block scroll */
+.bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none; /* 👈 VERY important to allow scrolling over it */
 }
