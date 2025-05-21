@@ -9777,8 +9777,7 @@ textarea.form-control {
 
 
 
-/* === 🔧 Fix: Mobile scroll issue on home section === */
-
+/* ✅ Fix mobile scroll issue after menu interaction */
 html, body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -9788,7 +9787,6 @@ html, body {
 #home-section {
   height: 100vh;
   overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch;
   position: relative;
   z-index: 1;
 }
@@ -9805,21 +9803,14 @@ html, body {
   align-items: center;
 }
 
-body {
-  touch-action: pan-y;
-}
-
-
-/* ✅ Fix overflow scroll issue on mobile after menu open/close */
-body {
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
 .navbar-collapse {
   transition: height 0.3s ease;
 }
 
 .navbar-collapse.collapse.show {
   display: block !important;
+}
+
+body {
+  touch-action: pan-y;
 }
