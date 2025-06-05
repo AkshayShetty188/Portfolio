@@ -42,7 +42,7 @@
 	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+	          <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li> -->
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
@@ -397,7 +397,7 @@
 					style="background-image: url(images/project1.png); height: 250px;">
 					<div class="overlay"></div>
 					<div id="multi-crop-project" class="text text-center p-4">
-					  <h3><a href="#">Multi-Crop Plant Leaf Nutrient Deficiency Classification</a></h3>
+					  <h3><a href="https://github.com/AkshayShetty188/Multi-Crop-Plant-Leaf-Nutrient-Deficiency-Classification/tree/main#-multi-crop-plant-leaf-nutrient-deficiency-classification">Multi-Crop Plant Leaf Nutrient Deficiency Classification</a></h3>
 					  <span>Deep Learning</span>
 					</div>
 				  </div>
@@ -468,7 +468,7 @@
 		  
 
 
-    <section class="ftco-section" id="blog-section">
+    <!-- <section class="ftco-section" id="blog-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -531,7 +531,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container">
@@ -808,13 +808,23 @@
 	  }, 5000);
 	});
   </script>
-  <script>
-  document.addEventListener('touchstart', function (e) {
-    if (!e.target.closest('.owl-carousel')) {
-      document.body.style.overflow = 'auto';
-    }
-  }, { passive: true });
+<script>
+  // ✅ Auto-collapse mobile nav and remove overlay blocking scroll
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (navbarCollapse.classList.contains('show')) {
+          navbarToggler.click(); // toggle collapse properly
+        }
+      });
+    });
+  });
 </script>
+
 
   </body>
 </html>
