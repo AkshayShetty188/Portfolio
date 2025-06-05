@@ -29,6 +29,36 @@
   color: #fff;
 }
 </style>
+<style>
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .slider-item {
+    min-height: 100vh;
+    height: auto !important;
+    overflow-y: auto !important;
+    touch-action: pan-y !important;
+    background-attachment: scroll !important;
+  }
+
+  .home-slider,
+  .owl-carousel,
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item {
+    height: auto !important;
+  }
+
+  .one-forth {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+</style>
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -796,6 +826,13 @@
   };
 </script>
 
+<script>
+document.addEventListener('touchstart', function (e) {
+  if (e.target.closest('.slider-item')) {
+    e.stopPropagation(); // ensure scroll can bubble
+  }
+}, { passive: true });
+</script>
 
 
   </body>
