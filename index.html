@@ -22,6 +22,13 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="icon" type="image/png" href="images/favicon.png">
+	<style>
+.typewrite > .wrap {
+  border-right: 0.08em solid #fff;
+  font-weight: bold;
+  color: #fff;
+}
+</style>
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -61,8 +68,9 @@
 				<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 				  <div class="text">
 					<span class="subheading">Hello!</span>
-					<h1 class="mb-4 mt-3">I'm <span>Akshay D Shetty</span></h1>
-					<h2 class="mb-4">A Data Scientist</h2>
+					<h1 class="typewrite mb-4 mt-3" data-period="2000" data-type='["I&#39;m Akshay D Shetty – A Data Scientist"]'>
+  <span class="wrap"></span>
+</h1>
 					<p>
 					  <a href="https://www.linkedin.com/in/akshay18shetty" target="_blank" class="btn btn-primary py-3 px-4">Hire me</a>
 					  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
@@ -85,7 +93,9 @@
 				<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 				  <div class="text">
 					<span class="subheading">Hello!</span>
-					<h1 class="mb-4 mt-3">I'm a <span>Data Scientist</span> based in India</h1>
+					<h1 class="typewrite mb-4 mt-3" data-period="2000" data-type='["I&#39;m a Data Scientist based in India"]'>
+  <span class="wrap"></span>
+</h1>
 					<p>
 					  <a href="https://www.linkedin.com/in/akshay18shetty" target="_blank" class="btn btn-primary py-3 px-4">Hire me</a>
 					  <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
@@ -465,73 +475,7 @@
 			  </div>
 			</div>
 		  </section>
-		  
-
-
-    <!-- <section class="ftco-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Blog</h1>
-            <h2 class="mb-4">Our Blog</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">June 21, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">June 21, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-              	<div class="d-flex align-items-center mb-3 meta">
-	                <p class="mb-0">
-	                	<span class="mr-2">June 21, 2019</span>
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-                <h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
+	
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container">
@@ -789,41 +733,69 @@
   
   <script src="js/main.js"></script>
   <script>
-	$(document).ready(function () {
-	  // Initialize Owl Carousel with autoplay turned off
-	  var owl = $(".home-slider");
-	  owl.owlCarousel({
-		items: 1,
-		loop: true,
-		autoplay: false, // we will start it manually after 5s
-		autoplayTimeout: 7000,
-		animateOut: 'fadeOut',
-		autoplayHoverPause: false
-	  });
-  
-	  // Wait 5 seconds, then go to next slide and start autoplay
-	  setTimeout(function () {
-		owl.trigger('next.owl.carousel');
-		owl.trigger('play.owl.autoplay');
-	  }, 5000);
-	});
-  </script>
-<script>
-  // ✅ Auto-collapse mobile nav and remove overlay blocking scroll
-  document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        if (navbarCollapse.classList.contains('show')) {
-          navbarToggler.click(); // toggle collapse properly
-        }
-      });
+  $(document).ready(function () {
+    // Initialize Owl Carousel with longer autoplay delay to allow full typing
+    var owl = $(".home-slider");
+    owl.owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,            // autoplay ON
+      autoplayTimeout: 9000,     // ⏱ delay between slides (9 seconds)
+      animateOut: 'fadeOut',
+      autoplayHoverPause: false
     });
   });
 </script>
+<script>
+  class TxtType {
+    constructor(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 10) || 2000;
+      this.txt = '';
+      this.isDeleting = false;
+      this.tick();
+    }
+
+    tick() {
+      let i = this.loopNum % this.toRotate.length;
+      let fullTxt = this.toRotate[i];
+
+      this.txt = this.isDeleting
+        ? fullTxt.substring(0, this.txt.length - 1)
+        : fullTxt.substring(0, this.txt.length + 1);
+
+      this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+      let delta = 200 - Math.random() * 100;
+      if (this.isDeleting) delta /= 2;
+
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+      }
+
+      setTimeout(() => this.tick(), delta);
+    }
+  }
+
+  window.onload = function () {
+    const elements = document.getElementsByClassName('typewrite');
+    for (let i = 0; i < elements.length; i++) {
+      const toRotate = elements[i].getAttribute('data-type');
+      const period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtType(elements[i], JSON.parse(toRotate), period);
+      }
+    }
+  };
+</script>
+
 
 
   </body>

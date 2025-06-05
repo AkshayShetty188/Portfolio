@@ -9858,3 +9858,27 @@ body {
 
 
 
+/* Hide background image ONLY on small screens */
+@media (max-width: 767px) {
+  .slider-item {
+    background-image: none !important;
+    background-color: #1a1a1a !important; /* fallback dark color */
+  }
+
+  .bg-video {
+    display: none !important;
+  }
+}
+
+/* Restore background image/video for desktop */
+@media (min-width: 768px) {
+  .slider-item {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .bg-video {
+    display: block !important;
+  }
+}
